@@ -7,7 +7,7 @@ export default function HomePage() {
         <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
           Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
         </h1>
-        <div>Hello Benjamin 2</div>
+        <div>Hello Benjamin 3</div>
       </div>
     </main>
   );
