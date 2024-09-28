@@ -1,14 +1,37 @@
 import Link from "next/link";
 
+const images = [
+  "https://utfs.io/f/if4up8ujGLwQXNs8ZozAve0bqTjN5MEza6tmsox8QyV1nOPf",
+  "https://utfs.io/f/if4up8ujGLwQXNs8ZozAve0bqTjN5MEza6tmsox8QyV1nOPf",
+  "https://utfs.io/f/if4up8ujGLwQXNs8ZozAve0bqTjN5MEza6tmsox8QyV1nOPf",
+  "https://utfs.io/f/if4up8ujGLwQXNs8ZozAve0bqTjN5MEza6tmsox8QyV1nOPf",
+  "https://utfs.io/f/if4up8ujGLwQHl5Em3ToKQMlJ48cT35vpLCPByfgE9IzFqjA"
+];
+
+const mockImages = images.map((url, index) => ({
+  id: index +1,
+  url,
+}));
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div>Hello Benjamin 3</div>
+    <main className="">
+      <div className="flex flex-wrap gap-4">
+        {
+          [
+            ...mockImages, 
+            ...mockImages, 
+            ...mockImages, 
+            ...mockImages
+          ].map((image) => (
+            <div key={image.id} className="w-48"> 
+              <img src={image.url} />
+            </div>
+          ))
+        }
+
       </div>
     </main>
   );
 }
+
